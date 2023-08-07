@@ -5,6 +5,7 @@ let navbar = document.querySelector('.navbar');
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
+    console.log(screen.width)
 }
 
 
@@ -52,10 +53,13 @@ ScrollReveal({
 })
 
 
-ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', { origin: 'bottom' });
-ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
-ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
+if (screen.width > 991) {
+    ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+    ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', { origin: 'bottom' });
+    ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
+    ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
+}
+
 
 
 
